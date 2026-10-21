@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Formula 1 Race Intelligence is an academic motorsport analytics project exploring race results, performance and strategy from 2010–2026.">
+  <title>F1 Race Intelligence | 2010–2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="F1 Race Intelligence, home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">F1 <b>RACE</b><br><b>INTELLIGENCE</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#about">About</a>
+        <a class="button button-small button-outline nav-dashboard" href="#dashboard">View Live Dashboard <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" id="overview" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> A MOTORSPORT DATA JOURNALISM PROJECT</p>
+        <h1 id="hero-title">BEYOND THE GRID.<br><span>INTO THE DATA.</span></h1>
+        <p class="hero-description">A closer look at the races, people, and decisions that shape Formula 1. Exploring the sport’s 2010–2026 data through careful preparation and interactive visual analysis.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#analytics">Explore analytics <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="#dashboard"><span class="play-icon" aria-hidden="true">↗</span> Tableau dashboard</a>
+        </div>
+        <div class="hero-footnote"><span class="rule"></span> INDEPENDENT ACADEMIC PROJECT <span class="footnote-divider">/</span> NOT AN OFFICIAL F1 PRODUCT</div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract circuit-inspired illustration">
+        <div class="visual-topline"><span>RACE INTELLIGENCE</span><span>2010 — 2026</span></div>
+        <svg class="circuit-art" viewBox="0 0 640 430" role="img" aria-labelledby="circuit-title circuit-desc">
+          <title id="circuit-title">Abstract race circuit line</title>
+          <desc id="circuit-desc">A red racing line loops through a dark, technical circuit-inspired graphic.</desc>
+          <defs>
+            <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+              <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity=".055" stroke-width="1"/>
+            </pattern>
+            <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="640" height="430" fill="url(#grid)"/>
+          <path class="track-shadow" d="M96 235 C84 192 101 144 143 128 L213 101 C241 91 270 101 282 127 L300 165 C310 185 332 190 349 176 L386 144 C410 124 445 129 462 155 L484 188 C502 215 485 246 455 257 L410 273 C383 282 378 313 403 326 L461 356 C486 369 509 354 511 326 L515 285 C518 256 547 243 568 258"/>
+          <path class="track-line" d="M96 235 C84 192 101 144 143 128 L213 101 C241 91 270 101 282 127 L300 165 C310 185 332 190 349 176 L386 144 C410 124 445 129 462 155 L484 188 C502 215 485 246 455 257 L410 273 C383 282 378 313 403 326 L461 356 C486 369 509 354 511 326 L515 285 C518 256 547 243 568 258"/>
+          <path class="track-dash" d="M96 235 C84 192 101 144 143 128 L213 101 C241 91 270 101 282 127 L300 165 C310 185 332 190 349 176 L386 144 C410 124 445 129 462 155 L484 188 C502 215 485 246 455 257 L410 273 C383 282 378 313 403 326 L461 356 C486 369 509 354 511 326 L515 285 C518 256 547 243 568 258"/>
+          <circle class="track-point" cx="96" cy="235" r="7"/><circle class="track-point" cx="568" cy="258" r="7"/>
+          <g class="map-label"><text x="67" y="270">START / FINISH</text><text x="460" y="225">DATA / TRACE</text></g>
+          <g class="map-metric"><text x="30" y="54">RACE</text><text x="30" y="82">BY RACE</text><text x="526" y="389">EST. 2010</text></g>
+        </svg>
+        <div class="visual-bottomline"><span><i></i> DATA IN MOTION</span><span>01 / 09</span></div>
+        <div class="hero-stamp" aria-hidden="true">RI<span>—</span>26</div>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>01</span><span></span><span>04</span></div>
+    </section>
+
+    <section class="overview-strip section-shell" aria-label="Project overview">
+      <div class="section-kicker"><span>01</span><span>PROJECT SNAPSHOT</span></div>
+      <div class="overview-grid">
+        <article class="overview-stat">
+          <span class="stat-value">05</span><span class="stat-label">SOURCE DATA SHEETS</span>
+          <span class="stat-note">Workbook structure reviewed</span>
+        </article>
+        <article class="overview-stat">
+          <span class="stat-value">09</span><span class="stat-label">PLANNED VISUALIZATIONS</span>
+          <span class="stat-note">Project scope, not verified findings</span>
+        </article>
+        <article class="overview-stat">
+          <span class="stat-value">10<span class="stat-range">—26</span></span><span class="stat-label">ANALYSIS PERIOD</span>
+          <span class="stat-note">2010–2026 · scope to validate</span>
+        </article>
+        <article class="overview-stat">
+          <span class="stat-value stat-stack">PY <i>+</i> TAB</span><span class="stat-label">TOOLS IN THE WORKFLOW</span>
+          <span class="stat-note">Python, Pandas &amp; Tableau</span>
+        </article>
+      </div>
+      <p class="provisional-note"><span aria-hidden="true">†</span> Counts and analysis range describe the project workbook and brief; coverage and data quality remain subject to validation against source files.</p>
+    </section>
+
+    <section class="analytics-section section-shell" id="analytics" aria-labelledby="analytics-title">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker"><span>02</span><span>THE ANALYSIS</span></div>
+          <h2 id="analytics-title">A season is more than<br><em>the finish line.</em></h2>
+        </div>
+        <p class="section-intro">Nine lenses on race performance, reliability, and strategy. These are the questions the project is designed to explore—not conclusions drawn from validated results.</p>
+      </div>
+      <div class="analysis-grid">
+        <article class="analysis-card analysis-lead">
+          <div class="card-top"><span class="card-number">01 / 09</span><span class="card-tag">OVERVIEW</span></div>
+          <div class="mini-kpis" aria-hidden="true"><span><b>—</b><small>SEASONS</small></span><span><b>—</b><small>RACES</small></span><span><b>—</b><small>DRIVERS</small></span></div>
+          <h3>KPI summary</h3>
+          <p>A compact starting point for the scope and coverage of the validated dataset.</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">02 / 09</span><span class="card-tag">GEOGRAPHY</span></div>
+          <div class="abstract-chart country-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><i>GP</i></div>
+          <h3>Grand Prix by country</h3>
+          <p>How has the calendar’s geographic footprint changed across the study period?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">03 / 09</span><span class="card-tag">RELIABILITY</span></div>
+          <div class="abstract-chart dnf-chart" aria-hidden="true"><span>COLLISION</span><i></i><span>MECHANICAL</span><i></i><span>OTHER</span><i></i></div>
+          <h3>DNF by team &amp; reason</h3>
+          <p>Which recorded retirement reasons and team-level patterns warrant closer inspection?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">04 / 09</span><span class="card-tag">CHAMPIONSHIP</span></div>
+          <div class="abstract-chart points-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <h3>Constructor points</h3>
+          <p>How do constructors compare on championship points within each season?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">05 / 09</span><span class="card-tag">DRIVERS</span></div>
+          <div class="abstract-chart leaderboard-chart" aria-hidden="true"><span>01</span><i></i><span>02</span><i></i><span>03</span><i></i></div>
+          <h3>Driver leaderboard</h3>
+          <p>What does a points-based view reveal about driver performance by season?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">06 / 09</span><span class="card-tag">COMPARISON</span></div>
+          <div class="abstract-chart team-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <h3>Season-wise teams</h3>
+          <p>How does the competitive picture shift when team results are compared season by season?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">07 / 09</span><span class="card-tag">STRATEGY</span></div>
+          <div class="abstract-chart tyre-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><b>TYRE</b></div>
+          <h3>Tyre compound mix</h3>
+          <p>Which compounds appear in the lap data, and how does their recorded distribution vary?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">08 / 09</span><span class="card-tag">CIRCUITS</span></div>
+          <div class="abstract-chart heatmap-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <h3>Circuit participation</h3>
+          <p>Which circuits recur most often in the dataset, and how do they map to countries?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+        <article class="analysis-card">
+          <div class="card-top"><span class="card-number">09 / 09</span><span class="card-tag">PODIUMS</span></div>
+          <div class="abstract-chart podium-chart" aria-hidden="true"><i>2</i><i>1</i><i>3</i></div>
+          <h3>Driver podiums</h3>
+          <p>How are podium achievements distributed across drivers and seasons?</p>
+          <a class="text-link" href="#demo-charts">View analysis <span aria-hidden="true">↘</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="demo-section section-shell" id="demo-charts" aria-labelledby="demo-title">
+      <div class="section-heading demo-heading">
+        <div>
+          <div class="section-kicker"><span>03</span><span>INTERACTIVE PREVIEW</span></div>
+          <h2 id="demo-title">Explore the <em>controls.</em></h2>
+        </div>
+        <p class="section-intro">Illustrative sample data only. These charts demonstrate planned interactions and are not Formula 1 statistics or project findings.</p>
+      </div>
+      <div class="demo-controls" aria-label="Illustrative chart filters">
+        <div class="filter-intro"><span class="filter-indicator"></span><span>DEMO DATA</span></div>
+        <label for="season-filter">Season
+          <select id="season-filter">
+            <option value="all">All sample seasons</option>
+            <option value="2010">2010</option>
+            <option value="2016">2016</option>
+            <option value="2020">2020</option>
+            <option value="2026">2026</option>
+          </select>
+        </label>
+        <label for="team-filter">Team
+          <select id="team-filter">
+            <option value="all">All sample teams</option>
+            <option value="Team A">Team A</option>
+            <option value="Team B">Team B</option>
+            <option value="Team C">Team C</option>
+          </select>
+        </label>
+        <span class="sample-label">ILLUSTRATIVE SAMPLE DATA</span>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-panel chart-panel-wide">
+          <div class="chart-heading"><div><span class="chart-overline">POINTS · SAMPLE DRIVERS</span><h3>Driver points</h3></div><span class="chart-unit">POINTS</span></div>
+          <div class="chart-wrap"><canvas id="driver-chart" role="img" aria-label="Illustrative sample driver points chart"></canvas></div>
+          <p class="chart-caption">Fictional values for interaction preview. Use the season and team selectors to update the view.</p>
+        </article>
+        <article class="chart-panel">
+          <div class="chart-heading"><div><span class="chart-overline">CONSTRUCTORS · SAMPLE TEAMS</span><h3>Team performance</h3></div><span class="chart-unit">POINTS</span></div>
+          <div class="chart-wrap"><canvas id="team-chart" role="img" aria-label="Illustrative sample team performance chart"></canvas></div>
+          <p class="chart-caption">Illustrative totals only; not sourced from race records.</p>
+        </article>
+        <article class="chart-panel">
+          <div class="chart-heading"><div><span class="chart-overline">LAP DATA · SAMPLE COMPOUNDS</span><h3>Tyre compounds</h3></div><span class="chart-unit">SHARE</span></div>
+          <div class="chart-wrap"><canvas id="tyre-chart" role="img" aria-label="Illustrative sample tyre compound distribution chart"></canvas></div>
+          <p class="chart-caption">Illustrative distribution only; compound naming is a chart demo.</p>
+        </article>
+        <article class="chart-panel chart-panel-wide">
+          <div class="chart-heading"><div><span class="chart-overline">RETIREMENTS · SAMPLE CATEGORIES</span><h3>DNF categories</h3></div><span class="chart-unit">COUNT</span></div>
+          <div class="chart-wrap chart-wrap-short"><canvas id="dnf-chart" role="img" aria-label="Illustrative sample DNF categories chart"></canvas></div>
+          <p class="chart-caption">Fictional category counts to demonstrate filter behavior; no finding is implied.</p>
+        </article>
+      </div>
+      <p class="chart-status" id="chart-status" role="status" aria-live="polite">Illustrative sample data · charts are for interaction preview only.</p>
+    </section>
+
+    <section class="dashboard-section section-shell" id="dashboard" aria-labelledby="dashboard-title">
+      <div class="dashboard-copy">
+        <div class="section-kicker"><span>04</span><span>TABLEAU PUBLIC</span></div>
+        <h2 id="dashboard-title">The full picture,<br><em>in the paddock.</em></h2>
+        <p>The published dashboard will bring the project’s validated views together in one place. Until a public link is configured, this preview stays in the garage.</p>
+        <div class="dashboard-note"><span class="lock-mark" aria-hidden="true">↗</span><span><b>Dashboard link not configured</b><small>Add the published Tableau Public URL in <code>script.js</code> to embed it here.</small></span></div>
+        <a class="button button-outline dashboard-open" hidden>Open dashboard <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="dashboard-frame" id="dashboard-frame">
+        <div class="frame-toolbar"><span><i></i><i></i><i></i></span><span>TABLEAU PUBLIC / PROJECT PREVIEW</span><span>—</span></div>
+        <div class="dashboard-placeholder">
+          <div class="placeholder-mark"><span>RI</span><i></i></div>
+          <p class="placeholder-label">THE RACE ISN'T OVER</p>
+          <h3>Dashboard<br>coming into view.</h3>
+          <p>Published Tableau visualizations will appear here once the public dashboard URL is added.</p>
+          <span class="placeholder-line"></span>
+          <small>NO DATA EMBEDDED · LINK PENDING</small>
+        </div>
+        <iframe class="tableau-embed" title="F1 Race Intelligence Tableau Public dashboard" loading="lazy" hidden></iframe>
+      </div>
+      <a class="fallback-dashboard-link" hidden>Open Dashboard in Tableau Public <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="method-section section-shell" id="methodology" aria-labelledby="method-title">
+      <div class="section-heading">
+        <div><div class="section-kicker"><span>05</span><span>METHOD &amp; PROCESS</span></div><h2 id="method-title">From workbook<br>to <em>race story.</em></h2></div>
+        <p class="section-intro">A repeatable workflow designed to make the analysis transparent, traceable, and clear about its limitations.</p>
+      </div>
+      <ol class="workflow">
+        <li><span class="workflow-index">01</span><div><span class="workflow-tool">EXCEL</span><h3>Collect the data</h3><p>Review the source workbook and record its tables, fields, and provenance.</p></div></li>
+        <li><span class="workflow-index">02</span><div><span class="workflow-tool">QUALITY CHECK</span><h3>Inspect &amp; validate</h3><p>Check coverage, missing values, duplicates, types, and definitions before analysis.</p></div></li>
+        <li><span class="workflow-index">03</span><div><span class="workflow-tool">PYTHON · PANDAS</span><h3>Prepare in Colab</h3><p>Clean, normalize, and transform data with repeatable notebook steps.</p></div></li>
+        <li><span class="workflow-index">04</span><div><span class="workflow-tool">CSV</span><h3>Export clean tables</h3><p>Write analysis-ready extracts with consistent fields and documented assumptions.</p></div></li>
+        <li><span class="workflow-index">05</span><div><span class="workflow-tool">TABLEAU PUBLIC</span><h3>Build visualizations</h3><p>Design focused views for performance, reliability, circuits, and strategy.</p></div></li>
+        <li><span class="workflow-index">06</span><div><span class="workflow-tool">DASHBOARD · STORY</span><h3>Connect the story</h3><p>Bring related views together with deliberate filters and explanatory context.</p></div></li>
+        <li><span class="workflow-index">07</span><div><span class="workflow-tool">QA</span><h3>Test performance</h3><p>Verify calculations, filter behavior, legibility, and dashboard responsiveness.</p></div></li>
+        <li><span class="workflow-index">08</span><div><span class="workflow-tool">PUBLISH</span><h3>Document &amp; publish</h3><p>Publish the validated work and document scope, caveats, and update status.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="findings-section section-shell" aria-labelledby="findings-title">
+      <div class="findings-copy">
+        <div class="section-kicker"><span>06</span><span>FINDINGS · IN PROGRESS</span></div>
+        <h2 id="findings-title">Evidence first.<br><em>Always.</em></h2>
+        <p>Findings will be written here after the source data, coverage, and calculations have been validated. Until then, this space makes room for evidence—not assumptions.</p>
+      </div>
+      <div class="finding-placeholder">
+        <div class="finding-top"><span class="finding-dot"></span><span>OBSERVATION STATUS</span><span class="finding-state">PENDING VALIDATION</span></div>
+        <div class="finding-rule"></div>
+        <p class="finding-label">OBSERVATION</p>
+        <h3>No verified findings<br>published yet.</h3>
+        <p>Analysis has not been confirmed against validated source data. No result is inferred from the illustrative charts above.</p>
+        <div class="finding-foot"><span>ASSUMPTIONS</span><b>Kept separate from evidence</b></div>
+      </div>
+    </section>
+
+    <section class="stack-section section-shell" aria-labelledby="stack-title">
+      <div class="section-heading stack-heading">
+        <div><div class="section-kicker"><span>07</span><span>TOOLKIT</span></div><h2 id="stack-title">Built with the<br><em>right tools.</em></h2></div>
+        <p class="section-intro">A lightweight, transparent workflow—from structured source data to a shareable public-facing project.</p>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-card"><span class="stack-icon tableau-icon">T</span><span class="stack-name">Tableau Public</span><span class="stack-role">Visual analysis</span></article>
+        <article class="stack-card"><span class="stack-icon python-icon">Py</span><span class="stack-name">Python</span><span class="stack-role">Data preparation</span></article>
+        <article class="stack-card"><span class="stack-icon pandas-icon">pd</span><span class="stack-name">Pandas</span><span class="stack-role">Tabular processing</span></article>
+        <article class="stack-card"><span class="stack-icon colab-icon">◉</span><span class="stack-name">Google Colab</span><span class="stack-role">Notebook workflow</span></article>
+        <article class="stack-card"><span class="stack-icon csv-icon">CSV</span><span class="stack-name">Excel / CSV</span><span class="stack-role">Source &amp; exports</span></article>
+        <article class="stack-card"><span class="stack-icon github-icon">GH</span><span class="stack-name">GitHub Pages</span><span class="stack-role">Static publishing</span></article>
+      </div>
+    </section>
+
+    <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+      <div class="about-index"><span>08</span><span>ABOUT THE PROJECT</span></div>
+      <div class="about-content">
+        <h2 id="about-title">Turning race data<br>into <em>understanding.</em></h2>
+        <div class="about-columns">
+          <p>This academic project uses data analysis and visualization to explore patterns across Formula 1 racing from 2010–2026. Its aim is to make complex records easier to inspect, compare, and discuss—not to present an official or live view of the sport.</p>
+          <p>The workbook describes five source tables covering race results, championship standings, circuits, lap intelligence, and qualifying. Table definitions alone do not verify completeness or historical accuracy; those limitations must be checked before publishing any finding.</p>
+        </div>
+        <div class="about-meta"><span><b>PROJECT TYPE</b> Academic · Independent</span><span><b>ANALYSIS PERIOD</b> 2010–2026 · Subject to validation</span><span><b>STATUS</b> In development</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main section-shell">
+      <a class="brand footer-brand" href="#top" aria-label="F1 Race Intelligence, back to top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">F1 <b>RACE</b><br><b>INTELLIGENCE</b></span>
+      </a>
+      <p>An independent academic exploration<br>of motorsport through data.</p>
+      <div class="footer-links"><span>PROJECT BY <b>HRITIK PATEL</b></span><span class="footer-link-pending">GITHUB REPOSITORY · NOT CONFIGURED</span><span class="footer-link-pending">TABLEAU PUBLIC · NOT CONFIGURED</span></div>
+      <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+    </div>
+    <div class="footer-bottom section-shell"><span>NOT AN OFFICIAL FORMULA 1 PRODUCT</span><span>© <span id="copyright-year"></span> HRITIK PATEL</span><span>BUILT FOR THE LOVE OF THE DATA <i>✳</i></span></div>
+  </footer>
+  <a class="floating-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>
